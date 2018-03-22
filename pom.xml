@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>info.biosfood</groupId>
+    <artifactId>clone.deep.and.shallow</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0</version>
+
+    <name>Deep and shallow copying</name>
+
+    <properties>
+        <java.version>1.8</java.version>
+        <version.plugin.maven-compiler>3.1</version.plugin.maven-compiler>
+        <version.lang3>3.7</version.lang3>
+        <version.cloning>1.9.9</version.cloning>
+        <version.junit>4.12</version.junit>
+    </properties>
+
+    <build>
+        <sourceDirectory>src/main/java</sourceDirectory>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+
+        <testSourceDirectory>src/test/java</testSourceDirectory>
+        <testResources>
+            <testResource>
+                <directory>src/test/resources</directory>
+                <filtering>true</filtering>
+            </testResource>
+        </testResources>
+
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${version.plugin.maven-compiler}</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>${version.lang3}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>uk.com.robust-it</groupId>
+            <artifactId>cloning</artifactId>
+            <version>${version.cloning}</version>
+        </dependency>
+
+        <!-- test -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${version.junit}</version>
+            <scope>test</scope>
+        </dependency>
+
+
+    </dependencies>
+
+</project>
