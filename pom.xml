@@ -14,7 +14,7 @@
         <version.plugin.maven-compiler>3.1</version.plugin.maven-compiler>
         <version.lang3>3.7</version.lang3>
         <version.cloning>1.9.9</version.cloning>
-        <version.junit>4.12</version.junit>
+        <version.junit>4.13.1</version.junit>
     </properties>
 
     <build>
